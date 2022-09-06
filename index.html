@@ -23,7 +23,6 @@
 		
 		<script type="x-shader/x-fragment" id="gsFragmentShader">
 			precision highp float;
-			precision highp usampler2D;
 			
 			varying vec2 vertUV;
 			
@@ -65,7 +64,6 @@
 		
 		<script type="x-shader/x-fragment" id="screenFragmentShader">
 			precision highp float;
-			precision highp usampler2D;
 			
 			varying vec2 vertUV;
 			
@@ -170,7 +168,7 @@
 				mScene = new THREE.Scene();
 				
 				// カメラの生成
-				mCamera = new THREE.OrthographicCamera(-0.5, 0.5, 0.5, -0.5, -100, 100);
+				mCamera = new THREE.OrthographicCamera(-0.5, 0.5, 0.5, -0.5, -10000, 10000);
 				mCamera.position.z = 100;
 				mScene.add(mCamera);
 				
