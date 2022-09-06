@@ -23,13 +23,14 @@
 		
 		<script type="x-shader/x-fragment" id="gsFragmentShader">
 			precision highp float;
+			precision highp usampler2D;
 			
 			varying vec2 vertUV;
 			
 			uniform float screenWidth;
 			uniform float screenHeight;
 			uniform vec2 brush;
-			uniform sampler2D tSource;
+			uniform usampler2D tSource;
 			
 			uniform float dt;
 			uniform float Du;
@@ -70,7 +71,7 @@
 			
 			uniform float screenWidth;
 			uniform float screenHeight;
-			uniform sampler2D tSource;
+			uniform usampler2D tSource;
 			
 			void main()
 			{
